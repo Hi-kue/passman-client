@@ -1,0 +1,30 @@
+{
+  "name": "passman-client",
+  "version": "0.0.1",
+  "description": "password manager cli application to perform crud ops on deployed pb instance.",
+  "homepage": "https://github.com/Hi-kue/passman-client#readme",
+  "bugs": {
+    "url": "https://github.com/Hi-kue/passman-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hi-kue/passman-client.git"
+  },
+  "license": "MIT",
+  "author": "Hi-kue",
+  "type": "module",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "biome:format": "npx biome format --write .",
+    "biome:check": "npx biome check --write .",
+    "biome:lint": "npx biome lint --write ."
+  },
+  "dependencies": {
+    "@clack/core": "^0.4.1",
+    "@clack/prompts": "^0.9.1"
+  }
+}

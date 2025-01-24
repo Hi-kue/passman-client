@@ -1,5 +1,7 @@
 import PocketBase from "pocketbase";
+import { config } from "dotenv";
 
+config();
 
 if (!process.env.PRIVATE_POCKETBASE_URL || process.env.PRIVATE_POCKETBASE_URL === "") {
     throw new Error("PRIVATE_POCKETBASE_UR is not aptly defined.");
