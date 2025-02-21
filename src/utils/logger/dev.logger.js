@@ -1,23 +1,23 @@
 import { createLogger, format, transports } from "winston";
 
 const devLoggerFormat = format.printf(({ level, message, timestamp, stack }) => {
-    return `${timestamp} ${level}: ${stack || message}`;
+  return `${timestamp} ${level}: ${stack || message}`;
 });
 
 const logger = createLogger({
-    level: 'debug',
-    format: format.combine(
-        format.colorize(),
-        format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
-        format.errors({ stack: true }),
-        format.splat(),
-        devLoggerFormat
-    ),
-    transports: [
-        new transports.Console({
-            stderrLevels: ['error'],
-        })
-    ],
+  level: "debug",
+  format: format.combine(
+    format.colorize(),
+    format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
+    format.errors({ stack: true }),
+    format.splat(),
+    devLoggerFormat,
+  ),
+  transports: [
+    new transports.Console({
+      stderrLevels: ["error"],
+    }),
+  ],
 });
 
 logger.success = (message) => logger.info(`λ ${message}`);

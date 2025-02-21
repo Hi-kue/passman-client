@@ -9,13 +9,13 @@
  * @property {string} notes - Additional notes for the password entry
  */
 interface Password {
-    id: string;
-    email: string;
-    website_url: string;
-    username: string;
-    enc_password: string;
-    dec_token: Dec_Token;
-    notes: string;
+  id: string;
+  email: string;
+  website_url: string;
+  username: string;
+  enc_password: string;
+  dec_token: Dec_Token;
+  notes: string;
 }
 
 /**
@@ -24,11 +24,8 @@ interface Password {
  * @property {number} key_shift - The key shift value
  */
 interface Dec_Token {
-    token: string;
-    key_shift: number;
+  token: string;
+  key_shift: number;
 }
 
-export {
-    Password,
-    Dec_Token
-}
+export type { Password, Dec_Token };
